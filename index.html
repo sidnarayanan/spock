@@ -249,22 +249,29 @@
     About
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#key-features" class="md-nav__link">
-    Key Features:
-  </a>
-  
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#documentation" class="md-nav__link">
     Documentation
   </a>
   
 </li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-install" class="md-nav__link">
+    Quick Install
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-features" class="md-nav__link">
+    Key Features
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#main-contributors" class="md-nav__link">
@@ -720,22 +727,29 @@
     About
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#key-features" class="md-nav__link">
-    Key Features:
-  </a>
-  
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#documentation" class="md-nav__link">
     Documentation
   </a>
   
 </li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-install" class="md-nav__link">
+    Quick Install
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-features" class="md-nav__link">
+    Key Features
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#main-contributors" class="md-nav__link">
@@ -770,7 +784,7 @@
                 
                   <h1>Home</h1>
                 
-                <p><img alt="Spock" src="resources/images/logo.png" /></p>
+                <p><a href="https://fidelity.github.io/spock/"><img alt="Spock" src="resources/images/logo.png" /></a></p>
 <blockquote>
 <p>Managing complex configurations any other way would be highly illogical...</p>
 </blockquote>
@@ -786,37 +800,26 @@ applications. <code>spock</code> let's you focus on the code you need to write i
 creating ArgParsers, reading configuration files, implementing traceability etc.</p>
 <p>In short, <code>spock</code> configurations are defined by simple and familiar class-based structures. This allows <code>spock</code> to 
 support inheritance, read from multiple markdown formats, and allow hierarchical configuration by composition.</p>
-<h4 id="key-features">Key Features:</h4>
+<h2 id="documentation">Documentation</h2>
+<p>Current documentation and more information can be found <a href="https://fidelity.github.io/spock/">here</a>.</p>
+<h2 id="quick-install">Quick Install</h2>
+<p>Supports Python 3.7+</p>
+<div class="codehilite"><pre><span></span>pip install spock-config
+</pre></div>
+
+
+<h2 id="key-features">Key Features</h2>
 <ul>
-<li>
-<p>Simple Declaration: Parameters are defined within a <code>@spock_config</code> decorated class. Supports types, 
-required/optional, and automatic defaults.</p>
-</li>
-<li>
-<p>Easily Managed Parameter Groups: Each class automatically generates its own object within a single namespace.</p>
-</li>
-<li>
-<p>Parameter Inheritance: Classes support inheritance allowing for complex configurations derived from a common base set
- of parameters.</p>
-</li>
-<li>
-<p>Multiple Configuration File Types: Configurations are specified from YAML, TOML, or JSON files.</p>
-</li>
-<li>
-<p>Hierarchical Configuration: composed from multiple configuration files via simple include statements.</p>
-</li>
-<li>
-<p>Immutable: All classes are <em>frozen</em> preventing any misuse or accidental overwrites.</p>
-</li>
-<li>
-<p>Tractability and Reproducibility: Save currently running parameter configuration with a single chained command. </p>
-</li>
+<li>Simple Declaration: Parameters are defined within a <code>@spock_config</code> decorated class. Supports types, required/optional, and automatic defaults.</li>
+<li>Easily Managed Parameter Groups: Each class automatically generates its own object within a single namespace.</li>
+<li>Parameter Inheritance: Classes support inheritance allowing for complex configurations derived from a common base set of parameters.</li>
+<li>Multiple Configuration File Types: Configurations are specified from YAML, TOML, or JSON files.</li>
+<li>Hierarchical Configuration: composed from multiple configuration files via simple include statements.</li>
+<li>Immutable: All classes are <em>frozen</em> preventing any misuse or accidental overwrites.</li>
+<li>Tractability and Reproducibility: Save currently running parameter configuration with a single chained command. </li>
 </ul>
-<h4 id="documentation">Documentation</h4>
-<p>Current documentation and more information can be found <a href="">here</a>.</p>
 <h4 id="main-contributors">Main Contributors</h4>
 <p><a href="https://github.com/ncilfone">Nicholas Cilfone</a>, <a href="https://github.com/sidnarayanan">Siddharth Narayanan</a></p>
-<hr />
 <p><code>spock</code> is developed and maintained by the <strong>Artificial Intelligence Center of Excellence at Fidelity Investments</strong>.</p>
                 
                   
