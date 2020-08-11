@@ -811,15 +811,15 @@ second function.</p>
 <p>Next let's create a simple configuration file that sets the values of our parameters. Let's make a YAML file (you can 
 also use TOML or JSON), <code>simple.yaml</code>:</p>
 <div class="codehilite"><pre><span></span><span class="c1"># Parameters</span>
-<span class="l l-Scalar l-Scalar-Plain">--parameter</span>
-<span class="l l-Scalar l-Scalar-Plain">fancy_parameter</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">8.8</span>
+<span class="nt">parameter</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="nt">fancy_parameter</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">8.8</span>
 <span class="nt">fancier_parameter</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">64.64</span>
 <span class="nt">most_fancy_parameter</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">768</span><span class="p p-Indicator">,</span> <span class="nv">768</span><span class="p p-Indicator">,</span> <span class="nv">512</span><span class="p p-Indicator">,</span> <span class="nv">128</span><span class="p p-Indicator">]</span>
 </pre></div>
 
 
 <p>Finally, we would then pass the path to the configuration file to the command line (-c or --config):</p>
-<div class="codehilite"><pre><span></span>$ python tutorial.py -c /configs/tutorial.yaml
+<div class="codehilite"><pre><span></span>$ python simple.py -c simple.yaml
 </pre></div>
                 
                   

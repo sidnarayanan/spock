@@ -15,6 +15,7 @@ setuptools.setup(
     name='spock-config',
     description='Spock is a framework designed to help manage complex parameter configurations for Python applications',
     long_description=long_description,
+    long_description_content_type='text/markdown',
     version=versioneer.get_version(),
     cmdclass=versioneer.get_cmdclass(),
     author="FMR LLC",
@@ -30,7 +31,8 @@ setuptools.setup(
         "Topic :: Software Development :: Libraries :: Python Modules"
     ],
     project_urls={
-        "Source": "https://github.com/fidelity/spock"
+        "Source": "https://github.com/fidelity/spock",
+        "Documentation": "https://fidelity.github.io/spock/"
     },
     keywords="dataclass config argparser parameter configuration",
     packages=setuptools.find_packages(exclude=["*.tests", "*.tests.*", "tests.*", "tests"]),
