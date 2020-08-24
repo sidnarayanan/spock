@@ -108,6 +108,22 @@ class AllInherited:
         assert arg_builder.TypeInherited.tuple_p_opt_def_bool == (True, False)
 
 
+class SingleConfigDefaults:
+    def test_defaults(self, config):
+        # Optional w/ Defaults #
+        assert config.int_p_opt_def == 10
+        assert config.float_p_opt_def == 10.0
+        assert config.string_p_opt_def == 'Spock'
+        assert config.list_p_opt_def_float == [10.0, 20.0]
+        assert config.list_p_opt_def_int == [10, 20]
+        assert config.list_p_opt_def_str == ['Spock', 'Package']
+        assert config.list_p_opt_def_bool == [True, False]
+        assert config.tuple_p_opt_def_float == (10.0, 20.0)
+        assert config.tuple_p_opt_def_int == (10, 20)
+        assert config.tuple_p_opt_def_str == ('Spock', 'Package')
+        assert config.tuple_p_opt_def_bool == (True, False)
+
+
 # TESTS
 # BASED ON YAML FILE
 class TestAllTypesYAML(AllTypes):
@@ -376,3 +392,23 @@ class TestJSONWriter:
             with open(fname, 'r') as fin:
                 print(fin.read())
             assert len(list(tmp_path.iterdir())) == 1
+
+
+class TestSingleNested(SingleConfigDefaults):
+    """Check that a nested config gets built as expected"""
+    @staticmethod
+    @pytest.fixture
+    def config(monkeypatch):
+        with monkeypatch.context() as m:
+            config = ConfigArgBuilder(TypeNestedConfig, desc='Test Builder')
+            return config.generate().TypeNestedConfig.single_child_config
+    
+
+class TestRepeatedNested(SingleConfigDefaults):
+    """Check that a repeated nested config gets built as expected"""
+    @staticmethod
+    @pytest.fixture
+    def config(monkeypatch):
+        with monkeypatch.context() as m:
+            config = ConfigArgBuilder(TypeNestedConfig, desc='Test Builder')
+            return config.generate().TypeNestedConfig.repeated_child_config[0]

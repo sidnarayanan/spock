@@ -167,3 +167,9 @@ class TypeDefaultOptConfig:
 class TypeInherited(TypeConfig, TypeDefaultOptConfig):
     """This tests inheritance with mixed default and non-default arguments"""
     ...
+
+
+@spock
+class TypeNestedConfig:
+    single_child_config: TypeDefaultOptConfig = TypeDefaultOptConfig()
+    repeated_child_config: List[TypeDefaultOptConfig] = [TypeDefaultOptConfig(), TypeDefaultOptConfig()]
